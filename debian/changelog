@@ -1,3 +1,12 @@
+nginx (1.10.3-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+  * Build against openssl 1.0.2 enabling ALPN support for http/2.
+  * Explicitly disable PIE as it breaks shared libs.
+  * Disable ec-x25519 test.
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Thu, 23 Feb 2017 09:09:34 +0200
+
 nginx (1.10.3-1) unstable; urgency=medium
 
   * New upstream release. (Closes: #855113)
