@@ -1,3 +1,9 @@
+nginx (1.10.3-1+deb9u1) stretch-security; urgency=high
+
+  * Handle CVE-2017-7529 Integer overflow in the range filter (Closes: #868109)
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Wed, 12 Jul 2017 08:44:59 +0300
+
 nginx (1.10.3-1) unstable; urgency=medium
 
   * New upstream release. (Closes: #855113)
