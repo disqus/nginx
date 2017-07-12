@@ -1,3 +1,9 @@
+nginx (1.6.2-5+deb8u5) jessie-security; urgency=high
+
+  * Handle CVE-2017-7529 Integer overflow in the range filter (Closes: #868109)
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Wed, 12 Jul 2017 10:29:22 +0300
+
 nginx (1.6.2-5+deb8u4) jessie-security; urgency=high
 
   * Non-maintainer upload by the Security Team.
