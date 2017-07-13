@@ -8,3 +8,4 @@ fix-CVE-2014-3616.patch
 0008-Resolver-changed-the-ngx_resolver_create_-_query-arg.patch
 0009-Resolver-fixed-use-after-free-memory-accesses-with-C.patch
 0010-Resolver-limited-CNAME-recursion.patch
+fix-CVE-2017-7529.patch

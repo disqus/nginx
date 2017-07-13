@@ -1,3 +1,12 @@
+nginx (1.2.1-2.2+wheezy4+deb7u1) wheezy-security; urgency=high
+
+  * CVE-2017-7529: Fix an vulnerability in the range filter. A specially
+    crafted request could have resulted in an integer overflow and incorrect
+    processing of ranges, potentially resulting in sensitive information
+    leak. (Closes: #868109)
+
+ -- Chris Lamb <lamby@debian.org>  Thu, 13 Jul 2017 09:06:49 +0100
+
 nginx (1.2.1-2.2+wheezy4) wheezy-security; urgency=high
 
   [ Christos Trochalakis ]
