@@ -1,3 +1,14 @@
+nginx (1.6.2-5+deb8u6) jessie-security; urgency=high
+
+  * CVE-2018-16845: Prevent a denial of service vulnerability due to an integer
+    underflow whilst calculating an MP4 header sizes. Previously, there was no
+    validation for the size of a 64-bit atom in an MP4 file. This could lead to
+    a CPU hog when the size is 0 or various other problems due to integer
+    underflow when the calculating atom data size, including segmentation
+    faults or even worker-process memory disclosure. (Closes: #913090)
+
+ -- Chris Lamb <lamby@debian.org>  Thu, 08 Nov 2018 18:32:42 +0100
+
 nginx (1.6.2-5+deb8u5) jessie-security; urgency=high
 
   * Handle CVE-2017-7529 Integer overflow in the range filter (Closes: #868109)
