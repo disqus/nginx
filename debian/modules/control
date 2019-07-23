@@ -34,7 +34,7 @@ Patch:
 
 Module: nchan
 Homepage: https://github.com/slact/nchan
-Version: 1.0.8
+Version: 1.2.6
 Files-Excluded: dev nchan_logo.png NchanSubscriber.js src/hiredis
 
 Module: http-uploadprogress
