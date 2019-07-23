@@ -194,6 +194,7 @@ Depends: libnginx-mod-http-auth-pam (= ${binary:Version}),
          libnginx-mod-http-image-filter (= ${binary:Version}),
          libnginx-mod-http-lua (= ${binary:Version}),
          libnginx-mod-http-perl (= ${binary:Version}),
+         libnginx-mod-http-set-misc (= ${binary:Version}),
          libnginx-mod-http-statsd (= ${binary:Version}),
          libnginx-mod-http-subs-filter (= ${binary:Version}),
          libnginx-mod-http-uploadprogress (= ${binary:Version}),
@@ -442,6 +443,12 @@ Description: RTMP support for Nginx
   - Stream relay support via a push or pull model;
   - Integrated stream recording;
   - and more.
+
+Package: libnginx-mod-http-set-misc
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Various set_xxx directives added to nginx's rewrite module
+ (md5/sha1, sql/json quoting, and many more)
 
 Package: libnginx-mod-http-statsd
 Architecture: any

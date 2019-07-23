@@ -24,6 +24,11 @@ Patch:
   discover-luajit-2.1.patch
 Files-Excluded: .gitignore .gitattributes .travis.yml .github
 
+Module: http-set-misc
+Homepage: https://github.com/openresty/set-misc-nginx-module
+Version: 0.32
+Files-Excluded: valgrind.supress
+
 Module: http-statsd
 Homepage: https://github.com/akatrevorjay/nginx-statsd
 Version: 0bd554a
