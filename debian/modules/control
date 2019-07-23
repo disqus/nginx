@@ -24,6 +24,10 @@ Patch:
   discover-luajit-2.1.patch
 Files-Excluded: .gitignore .gitattributes .travis.yml .github
 
+Module: http-statsd
+Homepage: https://github.com/akatrevorjay/nginx-statsd
+Version: 0bd554a
+
 Module: http-upstream-fair
 Homepage: https://github.com/gnosek/nginx-upstream-fair
 Version: a18b409

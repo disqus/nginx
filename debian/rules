@@ -18,6 +18,7 @@ DYN_MODS := \
 	http-lua \
 	http-ndk \
 	http-perl \
+	http-statsd \
 	http-subs-filter \
 	http-uploadprogress \
 	http-upstream-fair \
@@ -133,6 +134,7 @@ extras_configure_flags := \
 			--add-dynamic-module=$(MODULESDIR)/nchan \
 			--add-dynamic-module=$(MODULESDIR)/http-lua \
 			--add-dynamic-module=$(MODULESDIR)/rtmp \
+			--add-dynamic-module=$(MODULESDIR)/http-statsd \
 			--add-dynamic-module=$(MODULESDIR)/http-uploadprogress \
 			--add-dynamic-module=$(MODULESDIR)/http-upstream-fair \
 			--add-dynamic-module=$(MODULESDIR)/http-subs-filter
