@@ -1,3 +1,13 @@
+nginx (1.14.2-3) bionic; urgency=medium
+
+  * Update Nchan to version 1.2.6
+  * Add statsd module
+  * Build nginx-disqus package
+  * Add set-misc module
+  * Move `set-misc` module into extras
+
+ -- Cole Kowalski <cole@northernbloc.org>  Wed, 24 Jul 2019 14:52:30 -0400
+
 nginx (1.14.2-2) unstable; urgency=medium
 
   [ Kartik Mistry ]
