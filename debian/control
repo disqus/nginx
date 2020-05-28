@@ -24,6 +24,7 @@ Standards-Version: 4.3.0
 Homepage: https://nginx.net
 Vcs-Git: https://salsa.debian.org/nginx-team/nginx.git
 Vcs-Browser: https://salsa.debian.org/nginx-team/nginx
+Rules-Requires-Root: no
 
 Package: nginx
 Architecture: all
