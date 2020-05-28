@@ -152,7 +152,7 @@ override_dh_install:
 	DH_AUTOSCRIPTDIR=$(CURDIR)/debian/autoscripts debian/dh_nginx
 
 override_dh_installinit:
-	dh_installinit --no-restart-on-upgrade --no-start --name=nginx
+	dh_installinit --no-stop-on-upgrade --no-start --name=nginx
 
 override_dh_installsystemd:
 	dh_installsystemd --name=nginx
