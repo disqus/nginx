@@ -1,8 +1,28 @@
-nginx (1.18.0-1) UNRELEASED; urgency=medium
+nginx (1.18.0-1) unstable; urgency=medium
 
-  * New upstream version.
+  [ Ondřej Nový ]
+  * New upstream version 1.18.0
+  * Add REMOTE_USER fastcgi param
+  * Use debhelper-compat instead of debian/compat
+  * Replace dh_systemd_enable with dh_installsystemd
+  * Set Rules-Requires-Root: no
+  * d/rules/dh_installinit: Replace --no-restart-on-upgrade with
+    --no-stop-on-upgrade
+  * Bump debhelper compat level to 13
+  * Use package.maintscript instead of dpkg-maintscript-helper
+  * Bump standards version to 4.5.0
+  * d/watch: Change to 1.18.x
+  * d/patches/CVE-2019-20372.patch: Rebase
+  * Convert d/ngxmod to Python 3 (Closes: #953025)
+  * nchan: Upgrade to 1.2.7
+  * http-fancyindex: Upgrade to 0.4.4
+  * d/copyright: Add myself for Debian part
+  * Add myself as uploader
 
- -- Ondřej Nový <onovy@debian.org>  Thu, 28 May 2020 22:05:22 +0200
+  [ Mohamed Akram ]
+  * Enable --with-compat configure option (Closes: #897926)
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 29 May 2020 19:03:30 +0200
 
 nginx (1.16.1-3) unstable; urgency=high
 
