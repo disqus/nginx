@@ -106,8 +106,8 @@ Description: nginx web/proxy server (standard version)
  .
  MAIL MODULES: Mail Core, Auth HTTP, Proxy, SSL, IMAP, POP3, SMTP.
  .
- THIRD PARTY MODULES: Auth PAM, DAV Ext, Echo, HTTP Substitutions, Upstream
- Fair Queue.
+ THIRD PARTY MODULES: Auth PAM, DAV Ext, Echo, GeoIP2, HTTP Substitutions
+ Upstream Fair Queue.
 
 Package: nginx-light
 Architecture: any
@@ -185,7 +185,7 @@ Description: nginx web/proxy server (extended version)
  MAIL MODULES: Mail Core, Auth HTTP, Proxy, SSL, IMAP, POP3, SMTP.
  .
  THIRD PARTY MODULES: Auth PAM, Cache Purge, DAV Ext, Echo, Fancy Index,
- Headers More, Embedded Lua, HTTP Substitutions, Nchan, Upload Progress,
+ GeoIP2, Headers More, Embedded Lua, HTTP Substitutions, Nchan, Upload Progress,
  Upstream Fair Queue.
 
 Package: libnginx-mod-http-geoip
