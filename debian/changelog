@@ -1,3 +1,28 @@
+nginx (1.18.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright:
+    - Update for upstream release
+    - Add Thomas Ward from Ubuntu for debian/*
+  * d/conf/sites-available/default: Update PHP path for PHP 7.4
+  * d/conf/nginx.conf:
+    - Enable TLSv1.3
+    - Remove tcp_nodelay on, which is same as default
+    - Remove keepalive_timeout 65 and use default value 75s.
+    - Remove trailing whitespaces
+  * Introduce nginx-core and make it new default for "nginx"
+  * Add stream-geoip and stream-geoip2 modules
+  * d/ngx-conf: Convert to Python 3
+  * d/control: Add GeoIP2 into description
+  * Build dynamic modules only in extras flavour
+  * libnginx-mod-* now depends on nginx-<any flavour>
+  * Check if port 80 is free before starting during install
+
+  [ Ondřej Surý ]
+  * http-geoip2: Add ngx_http_geoip2_module 3.3
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 05 Jun 2020 18:28:40 +0200
+
 nginx (1.18.0-1) unstable; urgency=medium
 
   [ Ondřej Nový ]
