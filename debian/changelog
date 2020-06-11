@@ -1,3 +1,9 @@
+nginx (1.18.0-3) UNRELEASED; urgency=medium
+
+  * Source-only upload to allow migration.
+
+ -- Ondřej Nový <onovy@debian.org>  Thu, 11 Jun 2020 15:14:29 +0200
+
 nginx (1.18.0-2) unstable; urgency=medium
 
   [ Ondřej Nový ]
