@@ -1,3 +1,10 @@
+nginx (1.18.0-4) UNRELEASED; urgency=medium
+
+  * Revert: libnginx-mod-* now depends on nginx-<any flavour> (Closes: #963860)
+  * libnginx-mod-* recommends nginx now.
+
+ -- Ondřej Nový <onovy@debian.org>  Tue, 30 Jun 2020 18:26:36 +0200
+
 nginx (1.18.0-3) unstable; urgency=medium
 
   * Source-only upload to allow migration.
