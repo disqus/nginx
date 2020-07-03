@@ -1,9 +1,12 @@
-nginx (1.18.0-4) UNRELEASED; urgency=medium
+nginx (1.18.0-4) unstable; urgency=medium
 
-  * Revert: libnginx-mod-* now depends on nginx-<any flavour> (Closes: #963860)
+  * Revert: libnginx-mod-* now depends on nginx-<any flavour> (Closes: #963860).
+  * Update ngx_http_auth_pam_module upstream URL.
   * libnginx-mod-* recommends nginx now.
+  * http-auth-pam: Upgrade to 1.5.2 (Closes: #963567).
+  * d/copyright: Bump year of http-auth-pam.
 
- -- Ondřej Nový <onovy@debian.org>  Tue, 30 Jun 2020 18:26:36 +0200
+ -- Ondřej Nový <onovy@debian.org>  Fri, 03 Jul 2020 09:34:49 +0200
 
 nginx (1.18.0-3) unstable; urgency=medium
 
