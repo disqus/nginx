@@ -1,10 +1,10 @@
-nginx (1.18.0-5) UNRELEASED; urgency=medium
+nginx (1.18.0-5) unstable; urgency=medium
 
   * Prevented request smuggling in LUA
     CVE-2020-11724
     Closes: #964950
 
- -- Ondřej Nový <onovy@debian.org>  Tue, 14 Jul 2020 09:51:13 +0200
+ -- Ondřej Nový <onovy@debian.org>  Tue, 14 Jul 2020 10:08:15 +0200
 
 nginx (1.18.0-4) unstable; urgency=medium
 
