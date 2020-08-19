@@ -1,8 +1,8 @@
-nginx (1.18.0-6) UNRELEASED; urgency=medium
+nginx (1.18.0-6) unstable; urgency=medium
 
   * Fix GCC-10 compatibility (Closes: #957605).
 
- -- Ondřej Nový <onovy@debian.org>  Wed, 19 Aug 2020 15:19:33 +0200
+ -- Ondřej Nový <onovy@debian.org>  Wed, 19 Aug 2020 15:27:02 +0200
 
 nginx (1.18.0-5) unstable; urgency=medium
 
