@@ -1,3 +1,9 @@
+nginx (1.18.0-7) UNRELEASED; urgency=medium
+
+  * d/p/CVE-2019-20372.patch: Drop, applied upstream.
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 21 Aug 2020 14:14:13 +0200
+
 nginx (1.18.0-6) unstable; urgency=medium
 
   * Fix GCC-10 compatibility (Closes: #957605).
