@@ -1,8 +1,8 @@
-nginx (1.18.0-7) UNRELEASED; urgency=medium
+nginx (1.18.0-8disqus1) bionic; urgency=medium
 
-  * d/p/CVE-2019-20372.patch: Drop, applied upstream.
+  * Update changelog for 1.18.0-8 release
 
- -- Ondřej Nový <onovy@debian.org>  Fri, 21 Aug 2020 14:14:13 +0200
+ -- Cole Kowalski <cole@northernbloc.org>  Wed, 30 Sep 2020 15:30:19 -0400
 
 nginx (1.18.0-6) unstable; urgency=medium
 
