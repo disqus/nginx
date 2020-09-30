@@ -51,6 +51,9 @@ struct ngx_listening_s {
     ngx_listening_t    *previous;
     ngx_connection_t   *connection;
 
+    ngx_rbtree_t        rbtree;
+    ngx_rbtree_node_t   sentinel;
+
     ngx_uint_t          worker;
 
     unsigned            open:1;
@@ -144,12 +147,13 @@ struct ngx_connection_s {
     socklen_t           socklen;
     ngx_str_t           addr_text;
 
-    ngx_str_t           proxy_protocol_addr;
-    in_port_t           proxy_protocol_port;
+    ngx_proxy_protocol_t  *proxy_protocol;
 
 #if (NGX_SSL || NGX_COMPAT)
     ngx_ssl_connection_t  *ssl;
 #endif
+
+    ngx_udp_connection_t  *udp;
 
     struct sockaddr    *local_sockaddr;
     socklen_t           local_socklen;
@@ -205,7 +209,7 @@ struct ngx_connection_s {
 
 ngx_listening_t *ngx_create_listening(ngx_conf_t *cf, struct sockaddr *sockaddr,
     socklen_t socklen);
-ngx_int_t ngx_clone_listening(ngx_conf_t *cf, ngx_listening_t *ls);
+ngx_int_t ngx_clone_listening(ngx_cycle_t *cycle, ngx_listening_t *ls);
 ngx_int_t ngx_set_inherited_sockets(ngx_cycle_t *cycle);
 ngx_int_t ngx_open_listening_sockets(ngx_cycle_t *cycle);
 void ngx_configure_listening_sockets(ngx_cycle_t *cycle);

@@ -1,3 +1,123 @@
+nginx (1.18.0-7) UNRELEASED; urgency=medium
+
+  * d/p/CVE-2019-20372.patch: Drop, applied upstream.
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 21 Aug 2020 14:14:13 +0200
+
+nginx (1.18.0-6) unstable; urgency=medium
+
+  * Fix GCC-10 compatibility (Closes: #957605).
+
+ -- Ondřej Nový <onovy@debian.org>  Wed, 19 Aug 2020 15:27:02 +0200
+
+nginx (1.18.0-5) unstable; urgency=medium
+
+  * Prevented request smuggling in LUA
+    CVE-2020-11724
+    Closes: #964950
+
+ -- Ondřej Nový <onovy@debian.org>  Tue, 14 Jul 2020 10:08:15 +0200
+
+nginx (1.18.0-4) unstable; urgency=medium
+
+  * Revert: libnginx-mod-* now depends on nginx-<any flavour> (Closes: #963860).
+  * Update ngx_http_auth_pam_module upstream URL.
+  * libnginx-mod-* recommends nginx now.
+  * http-auth-pam: Upgrade to 1.5.2 (Closes: #963567).
+  * d/copyright: Bump year of http-auth-pam.
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 03 Jul 2020 09:34:49 +0200
+
+nginx (1.18.0-3) unstable; urgency=medium
+
+  * Source-only upload to allow migration.
+
+ -- Ondřej Nový <onovy@debian.org>  Thu, 11 Jun 2020 15:14:59 +0200
+
+nginx (1.18.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright:
+    - Update for upstream release
+    - Add Thomas Ward from Ubuntu for debian/*
+  * d/conf/sites-available/default: Update PHP path for PHP 7.4
+  * d/conf/nginx.conf:
+    - Enable TLSv1.3
+    - Remove tcp_nodelay on, which is same as default
+    - Remove keepalive_timeout 65 and use default value 75s.
+    - Remove trailing whitespaces
+  * Introduce nginx-core and make it new default for "nginx"
+  * Add stream-geoip and stream-geoip2 modules
+  * d/ngx-conf: Convert to Python 3
+  * d/control: Add GeoIP2 into description
+  * Build dynamic modules only in extras flavour
+  * libnginx-mod-* now depends on nginx-<any flavour>
+  * Check if port 80 is free before starting during install
+
+  [ Ondřej Surý ]
+  * http-geoip2: Add ngx_http_geoip2_module 3.3
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 05 Jun 2020 18:28:40 +0200
+
+nginx (1.18.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * New upstream version 1.18.0
+  * Add REMOTE_USER fastcgi param
+  * Use debhelper-compat instead of debian/compat
+  * Replace dh_systemd_enable with dh_installsystemd
+  * Set Rules-Requires-Root: no
+  * d/rules/dh_installinit: Replace --no-restart-on-upgrade with
+    --no-stop-on-upgrade
+  * Bump debhelper compat level to 13
+  * Use package.maintscript instead of dpkg-maintscript-helper
+  * Bump standards version to 4.5.0
+  * d/watch: Change to 1.18.x
+  * d/patches/CVE-2019-20372.patch: Rebase
+  * Convert d/ngxmod to Python 3 (Closes: #953025)
+  * nchan: Upgrade to 1.2.7
+  * http-fancyindex: Upgrade to 0.4.4
+  * d/copyright: Add myself for Debian part
+  * Add myself as uploader
+
+  [ Mohamed Akram ]
+  * Enable --with-compat configure option (Closes: #897926)
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 29 May 2020 19:03:30 +0200
+
+nginx (1.16.1-3) unstable; urgency=high
+
+  * Handle CVE-2019-20372, error page request smuggling
+    (Closes: #948579)
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Sat, 11 Jan 2020 09:36:00 +0200
+
+nginx (1.16.1-2) unstable; urgency=medium
+
+  * http-lua: Downgrade to 0.10.13 (Closes: #941917)
+    Temporary fix FTBFS on architectures where Luajit is not available.
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Sat, 12 Oct 2019 17:59:23 +0300
+
+nginx (1.16.1-1) unstable; urgency=medium
+
+  * New upstream version (Closes: #929200)
+  * Follow stable 1.16 releases (Closes: #929199)
+  * Drop already included debian patches
+  * http-ndk: Upgrade to 0.3.1
+  * http-lua: Upgrade to 0.10.15
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Mon, 09 Sep 2019 18:24:43 +0300
+
+nginx (1.14.2-3) unstable; urgency=high
+
+  * Backport upstream fixes for 3 CVEs (Closes: #935037)
+    Those fixes affect Nginx HTTP/2 implementation, which might cause
+    excessive memory consumption and CPU usage.
+    (CVE-2019-9511, CVE-2019-9513, CVE-2019-9516).
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Mon, 19 Aug 2019 11:30:08 +0300
+
 nginx (1.14.2-3disqus1) unstable; urgency=medium
 
   * Update Nchan to version 1.2.6
@@ -17,6 +137,8 @@ nginx (1.14.2-2) unstable; urgency=medium
 
   [ Christos Trochalakis ]
   * http-dav-ext: Upgrade to 3.0.0 (Closes: #851651)
+  * Use a minimal export of the upstream signing key
+  * Bump Standards-Version, no changes needed
 
  -- Christos Trochalakis <ctrochalakis@debian.org>  Thu, 27 Dec 2018 12:49:34 +0200
 
@@ -2320,4 +2442,3 @@ nginx (0.4.2-1) unstable; urgency=low
   * Tweaked the configuration file and the path handling for Debian.
 
  -- Jose Parrella <joseparrella@cantv.net>  Thu, 14 Sep 2006 11:40:20 -0400
-
