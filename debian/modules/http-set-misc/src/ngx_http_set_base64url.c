@@ -4,13 +4,14 @@
 #include "ddebug.h"
 
 #include    <ndk.h>
-#include "ngx_http_set_base64.h"
+#include "ngx_http_set_base64url.h"
 
 
 ngx_int_t
-ngx_http_set_misc_set_decode_base64(ngx_http_request_t *r, ngx_str_t *res,
+ngx_http_set_misc_set_decode_base64url(ngx_http_request_t *r, ngx_str_t *res,
     ngx_http_variable_value_t *v)
 {
+
     ngx_str_t        src;
 
     src.len = v->len;
@@ -19,9 +20,9 @@ ngx_http_set_misc_set_decode_base64(ngx_http_request_t *r, ngx_str_t *res,
     res->len = ngx_base64_decoded_length(v->len);
     ndk_palloc_re(res->data, r->pool, res->len);
 
-    if (ngx_decode_base64(res, &src) != NGX_OK) {
+    if (ngx_decode_base64url(res, &src) != NGX_OK) {
         ngx_log_error(NGX_LOG_ERR, r->connection->log, 0,
-                      "set_decode_base64: invalid value");
+                      "set_decode_base64url: invalid value");
         return NGX_ERROR;
     }
 
@@ -30,9 +31,10 @@ ngx_http_set_misc_set_decode_base64(ngx_http_request_t *r, ngx_str_t *res,
 
 
 ngx_int_t
-ngx_http_set_misc_set_encode_base64(ngx_http_request_t *r, ngx_str_t *res,
+ngx_http_set_misc_set_encode_base64url(ngx_http_request_t *r, ngx_str_t *res,
     ngx_http_variable_value_t *v)
 {
+
     ngx_str_t        src;
 
     src.len = v->len;
@@ -41,7 +43,7 @@ ngx_http_set_misc_set_encode_base64(ngx_http_request_t *r, ngx_str_t *res,
     res->len = ngx_base64_encoded_length(v->len);
     ndk_palloc_re(res->data, r->pool, res->len);
 
-    ngx_encode_base64(res, &src);
+    ngx_encode_base64url(res, &src);
 
     return NGX_OK;
 }
