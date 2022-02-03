@@ -1,8 +1,9 @@
-nginx (1.18.0-7) UNRELEASED; urgency=medium
+nginx (1.18.0-9disqus1) focal; urgency=medium
 
-  * d/p/CVE-2019-20372.patch: Drop, applied upstream.
+  * Upgrade nchan to 1.2.15
+  * Upgrade http-set-misc to v0.33
 
- -- Ondřej Nový <onovy@debian.org>  Fri, 21 Aug 2020 14:14:13 +0200
+ -- Cole Kowalski <cole@northernbloc.org>  Thu, 03 Feb 2022 16:17:15 +0000
 
 nginx (1.18.0-6) unstable; urgency=medium
 
